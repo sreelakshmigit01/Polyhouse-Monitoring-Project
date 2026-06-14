@@ -312,3 +312,40 @@ reports/
 * Streamlit dashboard development
 * Real-time sensor monitoring
 * Time-series forecasting
+
+## Random Forest Regressor
+
+A Random Forest Regressor was trained using the processed mushroom yield dataset to model nonlinear relationships between environmental variables and yield.
+
+### Features Used
+
+* temperature_c
+* humidity_pct
+* co2_ppm
+
+### Model Configuration
+
+* n_estimators = 100
+* random_state = 42
+* n_jobs = -1
+
+### Test Results
+
+| Metric | Value   |
+| ------ | ------- |
+| MAE    | 0.23 kg |
+| RMSE   | 0.30 kg |
+| R²     | 0.816   |
+
+### Feature Importance
+
+| Feature       | Importance |
+| ------------- | ---------- |
+| temperature_c | 0.499      |
+| co2_ppm       | 0.311      |
+| humidity_pct  | 0.190      |
+
+### Generated Artifacts
+
+* models/random_forest_1000.joblib
+* reports/figures/rf_importance_1000.png
